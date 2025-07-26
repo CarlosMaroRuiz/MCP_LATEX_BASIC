@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Generador LaTeX MCP{% endblock %}</title>
+    <title>{% block title %}LaTeX MCP Generator{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- Barra de navegación estilo Overleaf -->
+    <div class="overleaf-navbar">
         <div class="container">
-            <a class="navbar-brand" href="/">
-                <i class="fas fa-file-code"></i> LaTex MCP
+            <a href="/" class="logo">
+                <i class="fas fa-square-root-variable"></i> LaTeX MCP Generator
             </a>
+            <div class="navbar-actions">
+                <a href="/"><i class="fas fa-home"></i> Inicio</a>
+                <a href="https://www.overleaf.com" target="_blank"><i class="fas fa-external-link-alt"></i> Overleaf</a>
+            </div>
         </div>
-    </nav>
+    </div>
 
     <main class="container mt-4">
         {% block content %}{% endblock %}
     </main>
 
+    <footer class="footer mt-5">
+        <div class="container">
+            <p class="mb-0">LaTeX MCP Generator - Powered by FastMCP</p>
+            <p class="text-muted small">Genera documentos LaTeX completos usando modelos de lenguaje</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    {% block scripts %}{% endblock %}
 </body>
 </html>

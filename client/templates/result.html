@@ -1,44 +1,44 @@
-
 {% extends "base.html" %}
 
 {% block title %}Resultado - Generador LaTeX MCP{% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-10 mx-auto">
-        <div class="card mb-4">
-            <div class="card-header success-state">
-                <h4 class="mb-0">
-                    <i class="fas fa-check-circle"></i> Documento LaTeX Generado Exitosamente
-                </h4>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h6><i class="fas fa-info-circle"></i> Información del Documento</h6>
-                        <ul class="list-unstyled">
-                            <li><strong>Archivo:</strong> {{ result.filename }}</li>
-                            <li><strong>Ruta:</strong> {{ result.relative_path }}</li>
-                            <li><strong>Tamaño:</strong> {{ (result.file_size_bytes / 1024) | round(2) }} KB</li>
-                            <li><strong>Líneas:</strong> {{ result.lines_count }}</li>
-                            <li><strong>Generado:</strong> {{ result.saved_at }}</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h6><i class="fas fa-download"></i> Acciones Disponibles</h6>
-                        <div class="d-grid gap-2">
-                            <a href="{{ url_for('download_file', filename=result.filename) }}" 
-                               class="btn btn-success">
-                                <i class="fas fa-download"></i> Descargar .tex
-                            </a>
-                            <button class="btn btn-info" onclick="copyToClipboard()">
-                                <i class="fas fa-copy"></i> Copiar Código
-                            </button>
-                            <a href="{{ url_for('index') }}" class="btn btn-primary">
-                                <i class="fas fa-plus"></i> Generar Otro Documento
-                            </a>
-                        </div>
+<div class="custom-container">
+    <div class="card mb-4">
+        <div class="card-header success-state">
+            <h4 class="mb-0">
+                <i class="fas fa-check-circle"></i> Documento LaTeX Generado Exitosamente
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="two-column-layout">
+                <div class="column">
+                    <h6><i class="fas fa-info-circle"></i> Información del Documento</h6>
+                    <ul class="list-unstyled">
+                        <li><strong>Archivo:</strong> {{ result.filename }}</li>
+                        <li><strong>Ruta:</strong> {{ result.relative_path }}</li>
+                        <li><strong>Tamaño:</strong> {{ (result.file_size_bytes / 1024) | round(2) }} KB</li>
+                        <li><strong>Líneas:</strong> {{ result.lines_count }}</li>
+                        <li><strong>Generado:</strong> {{ result.saved_at }}</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h6><i class="fas fa-download"></i> Acciones Disponibles</h6>
+                    <div class="button-stack">
+                        <a href="{{ url_for('download_file', filename=result.filename) }}" 
+                           class="btn btn-success">
+                            <i class="fas fa-download"></i> Descargar .tex
+                        </a>
+                        <button class="btn btn-info" onclick="copyToClipboard()">
+                            <i class="fas fa-copy"></i> Copiar Código
+                        </button>
+                        <a href="{{ url_for('index') }}" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Generar Otro Documento
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+{% endblock %}
