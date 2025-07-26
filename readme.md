@@ -1,6 +1,6 @@
 # MCP LaTeX Generator
 
-Un servidor MCP (Model Context Protocol) para generar documentos LaTeX usando modelos de lenguaje de gran escala. Permite la creación, visualización y gestión de documentos LaTeX a través de una interfaz web o mediante comunicación directa con el servidor MCP.
+Un servidor MCP (Model Context Protocol) para generar documentos LaTeX. Permite la creación, visualización y gestión de documentos LaTeX a través de una interfaz web o mediante comunicación directa con el servidor MCP.
 
 ## Descripción
 
