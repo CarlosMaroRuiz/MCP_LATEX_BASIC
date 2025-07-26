@@ -1,0 +1,129 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=red]{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{lipsum}
+
+\title{Informe Técnico: Inteligencia Artificial}
+\author{Departamento de Ciencias de la Computación}
+\date{\today}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\titlespacing*{\section}{0pt}{1.5em}{0.8em}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\LARGE \textbf{HOJA INFORMATIVA SOBRE INTELIGENCIA ARTIFICIAL}}\\[1cm]
+{\Large Fundamentos, aplicaciones y consideraciones éticas}\\[2cm]
+\includegraphics[width=0.4\textwidth]{example-image}\\[1cm]
+{\large Elaborado por:}\\[0.5cm]
+{\Large \textbf{Departamento de Investigación en IA}}\\[2cm]
+{\large Instituto de Tecnología Avanzada}\\[0.5cm]
+{\large Ciudad del Conocimiento}\\[2cm]
+{\large \today}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section*{Resumen Ejecutivo}
+\addcontentsline{toc}{section}{Resumen Ejecutivo}
+La Inteligencia Artificial (IA) transforma radicalmente sectores económicos y sociales mediante sistemas capaces de realizar tareas que requieren inteligencia humana. Este documento analiza su definición, evolución histórica, aplicaciones contemporáneas y desafíos éticos emergentes, proporcionando una visión integral de su impacto actual y futuro.
+
+\section{Definición de Inteligencia Artificial}
+La Inteligencia Artificial se define como la disciplina científica que desarrolla sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. Estos sistemas exhiben características como:
+
+\begin{itemize}
+\item \textbf{Aprendizaje automático:} Capacidad de mejorar el rendimiento mediante experiencia
+\item \textbf{Razonamiento lógico:} Habilidad para resolver problemas y tomar decisiones
+\item \textbf{Percepción:} Interpretación de datos sensoriales (visuales, auditivos, etc.)
+\item \textbf{Interacción natural:} Comunicación en lenguaje humano mediante NLP
+\end{itemize}
+
+Matemáticamente, un sistema de IA puede modelarse como:
+\begin{equation}
+f: X \rightarrow Y
+\end{equation}
+donde \(X\) representa los datos de entrada e \(Y\) las acciones o predicciones, optimizadas mediante:
+\begin{equation}
+\arg\min_{\theta} \mathcal{L}(f_\theta(x), y)
+\end{equation}
+siendo \(\mathcal{L}\) la función de pérdida y \(\theta\) los parámetros del modelo.
+
+\section{Historia de la IA}
+La evolución de la IA se divide en cuatro etapas clave:
+
+\begin{table}[H]
+\centering
+\caption{Hitos históricos de la IA}
+\label{tab:historia}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Periodo} & \textbf{Evento} & \textbf{Significado} \\
+\midrule
+1950-1956 & Conferencia de Dartmouth & Nacimiento formal de la disciplina \\
+1956-1974 & Sistemas expertos & Primeras aplicaciones prácticas \\
+1980-1990 & Invierno de la IA & Reducción de financiamiento \\
+2010-actual & Deep Learning & Avances revolucionarios en reconocimiento \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Aplicaciones Actuales}
+Principales implementaciones contemporáneas:
+
+\subsection*{Sectores Transformados}
+\begin{itemize}
+\item \textbf{Salud:} Diagnóstico médico por imagen (precisión del 92\% en detección de tumores)
+\item \textbf{Finanzas:} Sistemas antifraude que analizan 10,000 transacciones/segundo
+\item \textbf{Manufactura:} Mantenimiento predictivo que reduce fallos en 45\%
+\item \textbf{Transporte:} Vehículos autónomos con más de 300 millones de km recorridos
+\end{itemize}
+
+\subsection*{Tecnologías Clave}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+\item Procesamiento de Lenguaje Natural (ChatGPT, asistentes virtuales)
+\item Visión por computador (reconocimiento facial, análisis de imágenes médicas)
+\item Sistemas de recomendación (Amazon, Netflix, Spotify)
+\item Robótica autónoma (logística, exploración espacial)
+\end{enumerate}
+
+\section{Desafíos Éticos}
+Consideraciones críticas en el desarrollo responsable:
+
+\begin{itemize}
+\item \textbf{Sesgos algorítmicos:} Discriminación en sistemas de contratación (\href{https://www.weforum.org}{WEF Report 2023})
+\item \textbf{Privacidad:} Uso de datos personales sin consentimiento explícito
+\item \textbf{Transparencia:} Opacidad en decisiones de modelos complejos (\"caja negra\")
+\item \textbf{Impacto laboral:} Automatización del 47\% de empleos para 2035 (Estudio McKinsey)
+\item \textbf{Control autónomo:} Responsabilidad en sistemas de armamento letal
+\end{itemize}
+
+\section*{Conclusiones}
+\addcontentsline{toc}{section}{Conclusiones}
+La IA representa una tecnología transformadora con potencial para incrementar la productividad global en un 40\% según el \href{https://www.pwc.com}{PwC AI Report}. Su desarrollo debe equilibrar innovación con marcos éticos robustos, especialmente en áreas sensibles como salud y justicia. La colaboración multidisciplinaria resulta esencial para maximizar beneficios sociales y mitigar riesgos.
+
+\begin{thebibliography}{9}
+\bibitem{russell} Russell, S., \& Norvig, P. (2020). \textit{Artificial Intelligence: A Modern Approach}. Pearson.
+\bibitem{floridi} Floridi, L. (2019). \textit{Ética de la Inteligencia Artificial}. Oxford University Press.
+\bibitem{aiindex} Stanford HAI (2023). \textit{AI Index Report}. Disponible en: \url{https://aiindex.stanford.edu}
+\end{thebibliography}
+
+\end{document}

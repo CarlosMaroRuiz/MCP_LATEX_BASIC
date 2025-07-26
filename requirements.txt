@@ -1,3 +1,5 @@
 fastmcp
 pydantic-ai
 python-dotenv
+pydantic-ai-slim[mcp]
+latex 

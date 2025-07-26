@@ -1,0 +1,96 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=red]{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{setspace}
+\usepackage{lipsum}
+
+\title{Estudio sobre Modelos de Aprendizaje Automático}
+\author{Dr. Ana Rodríguez}
+\date{15 de octubre de 2023}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este documento explora fundamentos teóricos y aplicaciones prácticas de algoritmos de aprendizaje automático. Se analizan modelos supervisados y no supervisados, con énfasis en regresión lineal y clustering. La investigación incluye comparativas de rendimiento y casos de uso en dominios industriales. \lipsum[1]
+\end{abstract}
+
+\section{Introducción a los Modelos de Aprendizaje}
+\label{sec:intro}
+
+El aprendizaje automático ha revolucionado múltiples campos científicos y tecnológicos. Los modelos se clasifican principalmente en tres categorías:
+
+\begin{enumerate}[label=(\roman*)]
+\item \textbf{Aprendizaje supervisado}: Modelos entrenados con datos etiquetados
+\item \textbf{Aprendizaje no supervisado}: Descubrimiento de patrones en datos sin etiquetar
+\item \textbf{Aprendizaje por refuerzo}: Sistemas basados en recompensas
+\end{enumerate}
+
+La ecuación fundamental para regresión lineal es:
+
+\begin{equation}
+\label{eq:regresion}
+y = \beta_0 + \beta_1 x + \epsilon
+\end{equation}
+
+donde $\beta_0$ es el intercepto, $\beta_1$ la pendiente, y $\epsilon$ el error aleatorio. \lipsum[2-3]
+
+\section{Análisis Comparativo de Algoritmos}
+\label{sec:analisis}
+
+La Tabla \ref{tab:comparativa} muestra métricas de rendimiento para modelos comunes:
+
+\begin{table}[H]
+\centering
+\caption{Comparación de algoritmos de clasificación}
+\label{tab:comparativa}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Algoritmo} & \textbf{Precisión} & \textbf{Recall} & \textbf{F1-score} \\
+\midrule
+Regresión Logística & 0.89 & 0.85 & 0.87 \\
+Árbol de Decisión & 0.92 & 0.78 & 0.84 \\
+Random Forest & 0.95 & 0.91 & 0.93 \\
+SVM & 0.93 & 0.89 & 0.91 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La función de pérdida para máquinas de vectores de soporte se expresa como:
+
+\begin{align}
+L(\mathbf{w}) &= \frac{1}{2}\|\mathbf{w}\|^2 + C\sum_{i=1}^n \xi_i \\
+\text{sujeto a} \quad y_i(\mathbf{w}\cdot\mathbf{x_i} + b) &\geq 1 - \xi_i, \quad \xi_i \geq 0
+\end{align}
+
+La Figura \ref{fig:curvas} ilustra curvas de aprendizaje típicas:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{example-image-a}
+\caption{Curvas de validación y entrenamiento}
+\label{fig:curvas}
+\end{figure}
+
+\lipsum[4-7]
+
+\begin{thebibliography}{9}
+\bibitem{ref1} Bishop, C. (2006). \textit{Pattern Recognition and Machine Learning}. Springer.
+\bibitem{ref2} Goodfellow, I. (2016). \textit{Deep Learning}. MIT Press.
+\bibitem{ref3} Scikit-learn: Machine Learning in Python. Disponible en: \url{https://scikit-learn.org}
+\end{thebibliography}
+
+\end{document}

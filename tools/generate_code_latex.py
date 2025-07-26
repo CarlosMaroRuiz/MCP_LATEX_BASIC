@@ -175,7 +175,7 @@ def register_tool(mcp: FastMCP):
                     "needs_cleaning": has_markdown
                 })
             
-            # Ordenar por fecha de creación (más reciente primero)
+           
             documents.sort(key=lambda x: x["created"], reverse=True)
             
             return {
